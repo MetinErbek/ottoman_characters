@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Osmanlıca Çevirme</title>
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+      <style type="text/css">
+         body {
+         background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         background-size: cover;
+         -o-background-size: cover;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
+         <div class="container">
+            <a class="navbar-brand" href="#">Karakter Çevirici</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+			<!--
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="#">Home
+                     <span class="sr-only">(current)</span>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Services</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Contact</a>
+                  </li>
+               </ul>
+            </div>
+			
+			
+			--->
+         </div>
+      </nav>
+      <!-- Page Content -->
+      <div class="container">
+         <div class="card border-0 shadow my-5">
+            <div class="card-body p-5">
+               <h1 class="font-weight-light text-center">Osmanlı Karakterlerine Çevirici</h1>
+               <p class="lead text-center">Türkçe Kelimeleri Osmanlıca yazılışlarına çeviren bir araçtır.</p>
+               <br>
+               <p class="lead"><b>Çevirmek İstediklerinizi Yazın:</b></p>
+               <div style="height: 400px">
+                  <textarea id="ourfield" class="form-control"></textarea>
+                  <br>
+                  <button id="submitbtn" class="form-control">Çevir</button>
+                  <br>
+                  <h2 class="lead" id="resultfield"></h2>
+               </div>
+               <p class="lead mb-0">Teşekkürler!</p>
+            </div>
+         </div>
+      </div>
+      <script
+         src="https://code.jquery.com/jquery-3.5.1.js"
+         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+         crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	  
+      <script src="ottoman.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+         	$('#submitbtn').on('click', function(){
+         		$('#resultfield').html(replaceName($('#ourfield').val()));
+         		$('#resultfield').show();
+         	})
+         });
+      </script>
+   </body>
+</html>
